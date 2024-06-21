@@ -24,6 +24,12 @@ Exercises:
 
 - [Logarithms](logarithms/README.md)
 
+## Analysis
+
+### Benchmarking
+
+This project includes a benchmarking tool that allows you to compare how the Algorithm performs against other implementations, the convention is to have a benchmark.mjs file beside the module.
+
 ## 💅🏼 Code Editor tips
 
 This project uses [Biome](https://biomejs.dev/) for code formatting and linting.

@@ -19,3 +19,11 @@ Run the test suite:
  node logarithms/parts.test.mjs
 
 ```
+
+## Analysis
+
+Run Benchmarks for the different Algorithms via
+
+```js
+node logarithms/benchmark.mjs
+```

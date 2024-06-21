@@ -1,0 +1,17 @@
+{
+  "name": "arithmos",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "Success is the sum of small efforts repeated daily",
+  "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.2",
+    "@types/node": "^20.14.7"
+  }
+}

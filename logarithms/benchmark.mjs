@@ -7,12 +7,18 @@ function loadBenchmark() {
 		"calculateMantisseAndCharacteristic",
 		1000,
 	)
-	// TODO: Add more methods to allow comparative analysis.
-	benchmark
-		.createSuite("calculateMantisseAndCharacteristic")
-		.add("Recursion", () => {
+
+	const suite = benchmark.createSuite("calculateMantisseAndCharacteristic")
+
+	suite.add("Recursion (1)", () => {
+		calculateMantisseAndCharacteristic(1)
+	})
+
+	for (const n of [2, 3, 100, 500, 1000, 10000, 1000000]) {
+		suite.ref(`Recursion ${n}`, () => {
 			calculateMantisseAndCharacteristic(500)
 		})
+	}
 	benchmark.run()
 }
 

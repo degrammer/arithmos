@@ -27,3 +27,5 @@ Run Benchmarks for the different Algorithms via
 ```js
 node logarithms/benchmark.mjs
 ```
+
+![recursion-iterative.png](recursion-iterative.png)

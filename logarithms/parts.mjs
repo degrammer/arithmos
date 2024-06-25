@@ -70,6 +70,27 @@ export function calculatePower(n, power) {
 	return power - 1
 }
 
+export function calculatePowerIterative(n) {
+	let done = false
+	let power = 1
+
+	if (n <= 0) {
+		return Number.NaN
+	}
+
+	while (!done) {
+		const powerCheck = n ** power
+
+		if (powerCheck < n) {
+			power += 1
+		} else {
+			done = true
+		}
+	}
+
+	return power
+}
+
 export function calculateRemaining(n, power) {
 	return n / 10 ** power
 }
@@ -83,8 +104,8 @@ export function printCalculation(n) {
 	return `Log(${n}) = Log(10^${power}*${remaining})`
 }
 
-export function calculateMantisseAndCharacteristic(n) {
-	const power = calculatePower(n, 1)
+export function calculateMantisseAndCharacteristic(n, useRecursion = true) {
+	const power = useRecursion ? calculatePower(n, 1) : calculatePowerIterative(n)
 	if (Number.isNaN(power)) {
 		return "Cannot calculate formula for this value for base 10"
 	}

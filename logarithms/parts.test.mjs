@@ -2,8 +2,8 @@ import { describe, it } from "node:test"
 import assert from "node:assert/strict"
 import {
 	calculateMantisseAndCharacteristic,
-	calculatePower,
 	printCalculation,
+	calculatePowerIteratively,
 } from "./parts.mjs"
 
 describe("Logarithms test suite", () => {
@@ -60,6 +60,32 @@ describe("Logarithms test suite", () => {
 				)
 
 				assert.strictEqual(result, 2.6989700043360187)
+			})
+		})
+
+		describe("When using non-recursive approach", () => {
+			it("For Log(500) ~ 2,69897", () => {
+				const { mantisse, characteristic, result } =
+					calculateMantisseAndCharacteristic(500, false)
+
+				assert.deepEqual(
+					{
+						mantisse,
+						characteristic,
+					},
+					{
+						mantisse: 0.6989700043360189,
+						characteristic: 2,
+					},
+				)
+
+				assert.strictEqual(result, 2.6989700043360187)
+			})
+
+			it("It calculates properly the power", () => {
+				for (const n of [2, 3, 100, 500, 1000, 10000, 1000000]) {
+					assert.strictEqual(calculatePowerIteratively(n), 2)
+				}
 			})
 		})
 	})

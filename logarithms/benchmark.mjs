@@ -10,15 +10,41 @@ function loadBenchmark() {
 
 	const suite = benchmark.createSuite("calculateMantisseAndCharacteristic")
 
-	suite.add("Recursion (1)", () => {
+	suite.add("Recursion 1", () => {
 		calculateMantisseAndCharacteristic(1)
 	})
 
-	for (const n of [2, 3, 100, 500, 1000, 10000, 1000000]) {
+	const operations = [
+		2,
+		3,
+		100,
+		500,
+		1000,
+		10000,
+		1000000,
+		1000000 * 2,
+		1000000 * 3,
+	]
+
+	for (const n of operations) {
 		suite.ref(`Recursion ${n}`, () => {
-			calculateMantisseAndCharacteristic(500)
+			calculateMantisseAndCharacteristic(n)
 		})
 	}
+	// benchmark.run()
+
+	suite.add("Iterative 1", () => {
+		calculateMantisseAndCharacteristic(1, { useRecursion: false })
+	})
+
+	for (const n of operations) {
+		suite.ref(`Iterative ${n}`, () => {
+			calculateMantisseAndCharacteristic(n, {
+				useRecursion: false,
+			})
+		})
+	}
+
 	benchmark.run()
 }
 

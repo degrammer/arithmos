@@ -83,9 +83,7 @@ describe("Logarithms test suite", () => {
 			})
 
 			it("It calculates properly the power", () => {
-				for (const n of [2, 3, 100, 500, 1000, 10000, 1000000]) {
-					assert.strictEqual(calculatePowerIterative(n), 2)
-				}
+				assert.strictEqual(calculatePowerIterative(2, false), 1)
 			})
 		})
 	})

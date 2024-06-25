@@ -16,6 +16,11 @@ pnpm i
 
 ```
 
+### Disclaimer!
+
+These Algorithms may have bugs! I don't check the solution against any platform or AI tools like ChatGPT.
+I'm old school, I compare them with Books or Wikipedia ;)
+
 ## Running exercises
 
 Each exercise is categorized in specific folders, the only requirement is to add a test (using the built-in Node.js Test runner) to run the algorithm.
@@ -25,6 +30,7 @@ Exercises:
 - [Logarithms](logarithms/README.md)
 - [Search](search/README.md)
 - [Strings](strings/README.md)
+- [Numbers](numbers/README.md)
 
 ## Analysis
 

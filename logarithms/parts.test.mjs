@@ -3,7 +3,7 @@ import assert from "node:assert/strict"
 import {
 	calculateMantisseAndCharacteristic,
 	printCalculation,
-	calculatePowerIteratively,
+	calculatePowerIterative,
 } from "./parts.mjs"
 
 describe("Logarithms test suite", () => {
@@ -84,7 +84,7 @@ describe("Logarithms test suite", () => {
 
 			it("It calculates properly the power", () => {
 				for (const n of [2, 3, 100, 500, 1000, 10000, 1000000]) {
-					assert.strictEqual(calculatePowerIteratively(n), 2)
+					assert.strictEqual(calculatePowerIterative(n), 2)
 				}
 			})
 		})

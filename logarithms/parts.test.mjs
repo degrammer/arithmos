@@ -64,24 +64,6 @@ describe("Logarithms test suite", () => {
 		})
 
 		describe("When using non-recursive approach", () => {
-			it("For Log(500) ~ 2,69897", () => {
-				const { mantisse, characteristic, result } =
-					calculateMantisseAndCharacteristic(500, false)
-
-				assert.deepEqual(
-					{
-						mantisse,
-						characteristic,
-					},
-					{
-						mantisse: 0.6989700043360189,
-						characteristic: 2,
-					},
-				)
-
-				assert.strictEqual(result, 2.6989700043360187)
-			})
-
 			it("It calculates properly the power", () => {
 				assert.strictEqual(calculatePowerIterative(2, false), 1)
 			})

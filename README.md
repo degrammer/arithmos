@@ -23,6 +23,8 @@ Each exercise is categorized in specific folders, the only requirement is to add
 Exercises:
 
 - [Logarithms](logarithms/README.md)
+- [Search](search/README.md)
+- [Strings](strings/README.md)
 
 ## Analysis
 

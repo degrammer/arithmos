@@ -5,6 +5,7 @@ One of the most common day-to-day operations are string manipulation, let's lear
 ## Available Algorithms
 
 - Compress letters
+- Palindrome
 
 Run the test suite:
 
